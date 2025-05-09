@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "coopersystem-desafio": {
+    "coopersystem-desafio-tecnico": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/coopersystem-desafio",
+            "outputPath": "dist/coopersystem-desafio-tecnico",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "coopersystem-desafio:build:production"
+              "browserTarget": "coopersystem-desafio-tecnico:build:production"
             },
             "development": {
-              "browserTarget": "coopersystem-desafio:build:development"
+              "browserTarget": "coopersystem-desafio-tecnico:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "coopersystem-desafio:build"
+            "browserTarget": "coopersystem-desafio-tecnico:build"
           }
         },
         "test": {
@@ -114,7 +114,7 @@
       }
     }
   },
-  "defaultProject": "coopersystem-desafio",
+  "defaultProject": "coopersystem-desafio-tecnico",
   "cli": {
     "analytics": "3fc252f1-3182-4aa9-9ab9-5b6bcb4afdca"
   }
