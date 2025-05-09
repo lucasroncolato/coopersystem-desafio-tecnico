@@ -14,7 +14,6 @@ Este projeto é uma solução para o desafio técnico proposto pela **Coopersyst
 - Modal de **sucesso** e **erro** conforme regras de negócio
 - Responsividade para mobile e desktop
 - Testes unitários com **Karma + Jasmine**
-- Armazenamento do resgate válido no `localStorage`
 
 ## 🔧 Tecnologias e bibliotecas
 
