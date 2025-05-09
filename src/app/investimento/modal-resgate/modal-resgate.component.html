@@ -1,0 +1,30 @@
+<mat-dialog-content class="mat-typography modal-recovery">
+  <button class="close" mat-button (click)="fecharModal()">X</button>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <h2>{{sucesso ? 'Resgate efetuado com sucesso!' : 'DADOS INVÁLIDOS!'}}</h2>
+
+      <div *ngIf="!sucesso">
+        <p>Você preencheu um ou mais campos com um valor acima do permitido:</p>
+        <p *ngFor="let resgate of resgatesNaoPermitidos"><span class="font-weight-bold">{{resgate.acao}}</span>: O valor a resgatar não pode ser maior
+          que {{resgate.valor | currency: 'BRL' }}</p>
+      </div>
+
+    </div>
+  </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions *ngIf="sucesso">
+  <div class="col-md-12 text-center">
+    <button mat-button class="but button3 mt-5 " (click)="fecharModal()" cdkFocusInitial>NOVO RESGATE
+    </button>
+  </div>
+</mat-dialog-actions>
+
+<mat-dialog-actions *ngIf="!sucesso">
+  <div class="col-md-12 text-center">
+    <button mat-button class="but button3 mt-5 " (click)="fecharModal()" cdkFocusInitial>CORRIGIR
+    </button>
+  </div>
+</mat-dialog-actions>

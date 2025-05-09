@@ -1,0 +1,44 @@
+<div class="page-header"></div>
+
+<div class="body">
+  <h1>INVESTIMENTOS</h1>
+  <div class="investimento-container">
+    <table class="investimento-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>NOME</th>
+          <th>OBJETIVO</th>
+          <th>SALDO</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let inv of listaInvestimentos; let i = index"
+          [ngClass]="{ 'opacity-50': inv.indicadorCarencia === 'S' }"
+        >
+          <td>{{ i + 1 }}</td>
+          <td>{{ inv.nome }}</td>
+          <td>{{ inv.objetivo }}</td>
+          <td>{{ inv.saldoTotal | currency : "BRL" }}</td>
+          <td>
+            <div class="action-icons">
+              <i
+                class="material-icons"
+                (click)="inv.indicadorCarencia === 'N' && asdf(inv)"
+                >search</i
+              >
+              <i
+                class="material-icons"
+                (click)="inv.indicadorCarencia === 'N' && asdf(inv)"
+                >edit</i
+              >
+              <i class="material-icons">delete</i>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

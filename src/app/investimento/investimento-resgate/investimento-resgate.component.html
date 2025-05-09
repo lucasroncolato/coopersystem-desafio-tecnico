@@ -1,0 +1,81 @@
+<div class="page-header"></div>
+
+<div class="body">
+  <h1>DADOS DO INVESTIMENTO</h1>
+  <div class="bloco-investimento">
+    <div class="item">
+      <i class="material-icons">person</i>
+      <div class="textos">
+        <div class="titulo">NOME</div>
+        <div class="valor">{{ investimento.nome }}</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <i class="material-icons">trending_up</i>
+      <div class="textos">
+        <div class="titulo">OBJETIVO</div>
+        <div class="valor">{{ investimento.objetivo }}</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <i class="material-icons">savings</i>
+      <div class="textos">
+        <div class="titulo">SALDO TOTAL</div>
+        <div class="valor">
+          {{ investimento.saldoTotal | currency : "BRL" }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="resgate-titulo">RESGATE</div>
+
+  <div class="tabela-resgate">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>AÇÃO</th>
+          <th>SALDO ACUMULADO</th>
+          <th>VALOR A RESGATAR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let acao of investimento?.acoes; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ acao.nome }}</td>
+          <td>
+            {{
+              (investimento.saldoTotal * acao.percentual) / 100
+                | currency : "BRL"
+            }}
+          </td>
+          <td>
+            <input
+              type="text"
+              [(ngModel)]="resgate[i]"
+              currencyMask
+              [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+            />
+            <br />
+            <span class="erro-resgate" *ngIf="temErroResgate(i)">
+              O valor a resgatar não pode ser maior que
+              {{ saldosAcumulados[i] | currency : "BRL" }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="valor-total">
+      Valor total do resgate: {{ calculoResgate() | currency : "BRL" }}
+      <div class="btns">
+        <button class="voltar" (click)="voltarParaListagem()">VOLTAR</button>
+        <button class="confirmar" (click)="abrirModal()">
+          CONFIRMAR RESGATE
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

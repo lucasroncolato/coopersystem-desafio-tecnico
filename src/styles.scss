@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto-Regular.ttf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('assets/fonts/Roboto-Bold.ttf') format('opentype')
+}
+
+a {
+  cursor: pointer;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+.title1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 20px;
+  color: #000B1C;
+}
+
+.card {
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  min-width: 100vh !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+input, select, textarea, button, a, li {
+  outline: none !important;
+}
+
+.font-weight-bold {
+  font-family: 'Roboto Bold';
+}
+
+.button1 {
+  margin-left: 3px;
+  background: dodgerblue;
+  color: #ffffff;
+  border: solid 1px dodgerblue;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  padding: 7px 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button2 {
+  margin-left: 3px;
+  background: gray;
+  color: #ffffff;
+  border: solid 1px black;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  padding: 7px 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button3 {
+  background: dodgerblue;
+  color: #ffffff;
+  border: solid 2px white;
+  font-family: 'Roboto';
+  border-radius: 4px;
+  padding: 7px 30px;
+
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
+  border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+
+  &:hover {
+    border: solid 2px dodgerblue;
+    background: #ffffff;
+    color: dodgerblue;
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .bloco-investimento {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tabela-resgate table {
+    font-size: 12px;
+  }
+
+  .valor-total {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .valor-total .btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .valor-total .btns button {
+    width: 100%;
+  }
+
+  .bloco-investimento .item {
+    justify-content: flex-start;
+  }
+
+  .resgate-titulo {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .tabela-resgate {
+    padding: 10px;
+    overflow-x: auto;
+  }
+}
