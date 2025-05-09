@@ -7,7 +7,7 @@
       <i class="material-icons">person</i>
       <div class="textos">
         <div class="titulo">NOME</div>
-        <div class="valor">{{ investimento.nome }}</div>
+        <div class="valor">{{ investimento?.nome }}</div>
       </div>
     </div>
 
@@ -15,7 +15,7 @@
       <i class="material-icons">trending_up</i>
       <div class="textos">
         <div class="titulo">OBJETIVO</div>
-        <div class="valor">{{ investimento.objetivo }}</div>
+        <div class="valor">{{ investimento?.objetivo }}</div>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
       <div class="textos">
         <div class="titulo">SALDO TOTAL</div>
         <div class="valor">
-          {{ investimento.saldoTotal | currency : "BRL" }}
+          {{ investimento?.saldoTotal | currency : "BRL" }}
         </div>
       </div>
     </div>

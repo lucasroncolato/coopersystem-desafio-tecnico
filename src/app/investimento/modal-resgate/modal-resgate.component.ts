@@ -8,7 +8,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 })
 export class ModalResgateComponent implements OnInit {
 
-  sucesso: boolean | undefined;
+  sucesso: boolean;
   resgatesNaoPermitidos: Array<{
     acao: string,
     valor: number
