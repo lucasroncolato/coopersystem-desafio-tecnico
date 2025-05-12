@@ -87,3 +87,22 @@ body {
     color: #bbb;
   }
 }
+
+@media (max-width: 768px) {
+  .investimento-container {
+    width: 100%;
+    padding: 10px;
+    overflow-x: auto;
+  }
+
+  .investimento-table {
+    min-width: 600px;
+    font-size: 13px;
+  }
+
+  .action-icons i {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
+}
