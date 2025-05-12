@@ -3,3 +3,9 @@
   height: auto;
   width: auto;
 }
+
+@media (max-width: 768px) {
+  .modal-recovery{
+    min-width: 0vh;
+  }
+}

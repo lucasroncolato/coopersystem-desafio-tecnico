@@ -80,7 +80,7 @@ input, select, textarea, button, a, li {
 .button3 {
   background: dodgerblue;
   color: #ffffff;
-  border: dashed 4px white;
+  border: solid 4px white;
   font-family: 'Roboto';
   border-radius: 5px;
   padding: 7px 30px;
@@ -89,7 +89,7 @@ input, select, textarea, button, a, li {
   border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 
   &:hover {
-    border: dashed 4px dodgerblue;
+    border: solid 4px dodgerblue;
     background: #ffffff;
     color: dodgerblue;
   }

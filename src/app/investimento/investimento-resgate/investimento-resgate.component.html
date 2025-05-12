@@ -72,7 +72,7 @@
       Valor total do resgate: {{ calculoResgate() | currency : "BRL" }}
       <div class="btns">
         <button class="voltar" (click)="voltarParaListagem()">VOLTAR</button>
-        <button class="confirmar" (click)="abrirModal()">
+        <button class="confirmar" (click)="abrirModal()" [disabled]="nenhumValorPreenchido()">
           CONFIRMAR RESGATE
         </button>
       </div>

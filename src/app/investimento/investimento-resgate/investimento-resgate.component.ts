@@ -120,6 +120,10 @@ export class InvestimentoResgateComponent implements OnInit {
     return this.resgate.every((valor, i) => valor <= this.saldosAcumulados[i]);
   }
 
+  nenhumValorPreenchido(): boolean {
+  return !this.resgate || this.resgate.every((v) => !v);
+}
+
   errosDeValidacao(): string[] {
     return this.resgate
       .map((valor, i) =>
